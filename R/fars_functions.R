@@ -24,6 +24,7 @@ prev_test <- function(drug, input_data) {
 }
 
 #function test_trend_ca
+#counts multi-drug hits more than once
 
 test_trend_ca <- function(drug, input_data = clean_fars) {
   ifelse(drug == "Nonalcohol", 
@@ -41,6 +42,7 @@ test_trend_ca <- function(drug, input_data = clean_fars) {
 }
 
 #function test_trend_log_reg
+# counts multi-drug hits more than once
 test_trend_log_reg <- function(drug, input_data = clean_fars) {
   ifelse(drug == "Nonalcohol", 
          to_test <- filter(input_data, drug_type != "Alcohol"),
